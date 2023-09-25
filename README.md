@@ -8,4 +8,6 @@ Receipe API Project. I am learning this from a Video Course
 docker build . -t receipe-api
 
 docker-compose build
+
+docker-compose run --rm app sh -c "flake8"
 ```
