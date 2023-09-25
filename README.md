@@ -6,4 +6,6 @@ Receipe API Project. I am learning this from a Video Course
 
 ```bash
 docker build . -t receipe-api
+
+docker-compose build
 ```
