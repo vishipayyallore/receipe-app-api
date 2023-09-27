@@ -15,5 +15,7 @@ docker-compose run --rm app sh -c "django-admin startproject app ."
 
 docker-compose up
 
- python .\manage.py test
+python ./app/manage.py test
+
+docker-compose run --rm app sh -c "python .\manage.py test"
 ```
