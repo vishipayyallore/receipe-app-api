@@ -20,4 +20,6 @@ docker-compose down
 python ./app/manage.py test
 
 docker-compose run --rm app sh -c "python .\manage.py test"
+
+docker-compose run --rm app sh -c "python manage.py startapp core"
 ```
