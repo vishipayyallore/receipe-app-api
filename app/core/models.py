@@ -1,12 +1,10 @@
 """
 Database models.
 """
+
 from django.db import models
 from django.contrib.auth.models import (
-    AbstractBaseUser,
-    BaseUserManager,
-    PermissionsMixin,
-)
+    AbstractBaseUser, BaseUserManager, PermissionsMixin,)
 
 # Create your models here.
 
@@ -32,4 +30,4 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     objects = UserManager()
 
-    USERNAME_FIELD = 'emailfrom django.db import models'
+    USERNAME_FIELD = 'test@example.com'
