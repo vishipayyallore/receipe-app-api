@@ -30,4 +30,4 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     objects = UserManager()
 
-    USERNAME_FIELD = 'test@example.com'
+    USERNAME_FIELD = 'email'
