@@ -30,4 +30,9 @@ urlpatterns = [
         SpectacularSwaggerView.as_view(url_name='api-schema'),
         name='api-docs',
     ),
+
+    # Add an empty path to redirect to the admin page
+    path('', SpectacularSwaggerView.as_view(url_name='api-schema'),
+         name='api-docs'),  # Redirect root to admin
+
 ]
