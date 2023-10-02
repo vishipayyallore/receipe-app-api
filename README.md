@@ -17,9 +17,9 @@ docker-compose up
 
 docker-compose down
 
-python ./app/manage.py test
+# python ./app/manage.py test
 
-docker-compose run --rm app sh -c "python .\manage.py test"
+docker-compose run --rm app sh -c "python manage.py test"
 
 docker-compose run --rm app sh -c "python manage.py startapp core"
 
@@ -38,4 +38,6 @@ docker volume rm receipe-app-api_dev-db-data
 docker-compose run --rm app sh -c "python manage.py wait_for_db && python manage.py migrate && python manage.py test && flake8"
 
 docker-compose run --rm app sh -c "python manage.py wait_for_db && python manage.py createsuperuser"
+
+docker-compose run --rm app sh -c "python manage.py test"
 ```
