@@ -47,7 +47,6 @@ docker-compose run --rm app sh -c "python manage.py test && flake8"
 We are going to create a user app. This will be used for authentication and authorization.
 
 ```bash
-
 docker-compose run --rm app sh -c "python manage.py startapp user"
 
 docker-compose run --rm app sh -c "python manage.py makemigrations"
