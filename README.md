@@ -41,3 +41,25 @@ docker-compose run --rm app sh -c "python manage.py test"
 
 docker-compose run --rm app sh -c "python manage.py test && flake8"
 ```
+
+## Creating User App
+
+We are going to create a user app. This will be used for authentication and authorization.
+
+```bash
+docker-compose run --rm app sh -c "python manage.py startapp user"
+
+docker-compose run --rm app sh -c "python manage.py makemigrations"
+
+docker-compose run --rm app sh -c "python manage.py wait_for_db && python manage.py migrate"
+
+docker-compose run --rm app sh -c "python manage.py test && flake8"
+
+docker compose -f "docker-compose.yml" up -d --build
+
+Token aaa8aaaa07aa3aaa0218aa2a19a7022a665a843a
+```
+
+```
+
+```
