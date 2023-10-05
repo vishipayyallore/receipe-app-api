@@ -65,6 +65,6 @@ Token aaa8aaaa07aa3aaa0218aa2a19a7022a665a843a
 ## Creating Receipe App
 
 ```bash
-docker-compose run --rm app sh -c "python manage.py startapp user"
+docker-compose run --rm app sh -c "python manage.py startapp receipe"
 
 ```
