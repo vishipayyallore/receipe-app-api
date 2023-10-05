@@ -31,6 +31,7 @@ urlpatterns = [
         name='api-docs',
     ),
     path('api/user/', include('user.urls')),
+    path('api/recipe/', include('recipe.urls')),
 
     # Add an empty path to redirect to the admin page
     path('', SpectacularSwaggerView.as_view(url_name='api-schema'),

@@ -1,11 +1,11 @@
-# Receipe Web API
+# Recipe Web API
 
-Receipe API Project. I am learning this from a Video Course
+Recipe API Project. I am learning this from a Video Course
 
 ## Few Commands
 
 ```bash
-docker build . -t receipe-api
+docker build . -t recipe-api
 
 docker-compose build
 
@@ -31,7 +31,7 @@ docker-compose run --rm app sh -c "python manage.py wait_for_db && python manage
 
 docker-compose down
 
-docker volume rm receipe-app-api_dev-db-data
+docker volume rm recipe-app-api_dev-db-data
 
 docker-compose run --rm app sh -c "python manage.py wait_for_db && python manage.py migrate && python manage.py test && flake8"
 
@@ -57,9 +57,14 @@ docker-compose run --rm app sh -c "python manage.py test && flake8"
 
 docker compose -f "docker-compose.yml" up -d --build
 
+docker compose up -d --build
+
 Token aaa8aaaa07aa3aaa0218aa2a19a7022a665a843a
 ```
 
-```
+## Creating Recipe App
+
+```bash
+docker-compose run --rm app sh -c "python manage.py startapp recipe"
 
 ```
