@@ -2,6 +2,21 @@
 
 Recipe API Project. I am learning this from a Video Course
 
+## Steps
+
+> 1. Create requirements.txt
+> 1. Create Dockerfile
+> 1. Create .dockerignore
+> 1. Create docker-compose.yml
+
+## 01-Dec-2023
+
+```bash
+docker build . -t recipe-api
+
+docker-compose build
+```
+
 ## Few Commands
 
 ```bash
