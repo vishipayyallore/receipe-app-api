@@ -8,6 +8,7 @@ Recipe API Project. I am learning this from a Video Course
 > 1. Create Dockerfile
 > 1. Create .dockerignore
 > 1. Create docker-compose.yml
+> 1. Create requirements.dev.txt (For Dev Dependencies)
 
 ## 01-Dec-2023
 
