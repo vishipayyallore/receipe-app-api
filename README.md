@@ -18,6 +18,16 @@ docker build . -t recipe-api
 docker-compose build
 ```
 
+## 02-Dec-2023
+
+```bash
+docker-compose run --rm app sh -c "flake8"
+
+docker-compose run --rm app sh -c "django-admin startproject app ."
+
+docker-compose up
+```
+
 ## Few Commands
 
 ```bash
