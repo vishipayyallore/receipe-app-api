@@ -30,6 +30,12 @@ docker-compose run --rm app sh -c "flake8"
 docker-compose run --rm app sh -c "python manage.py test"
 ```
 
+## 03-Dec-2023
+
+```bash
+docker-compose run --rm app sh -c "python manage.py startapp core"
+```
+
 ## Few Commands
 
 ```bash
