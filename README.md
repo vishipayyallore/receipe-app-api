@@ -8,6 +8,7 @@ Recipe API Project. I am learning this from a Video Course
 > 1. Create Dockerfile
 > 1. Create .dockerignore
 > 1. Create docker-compose.yml
+> 1. Create requirements.dev.txt (For Dev Dependencies. Example: Flake)
 
 ## 01-Dec-2023
 
@@ -15,6 +16,18 @@ Recipe API Project. I am learning this from a Video Course
 docker build . -t recipe-api
 
 docker-compose build
+```
+
+## 02-Dec-2023
+
+```bash
+docker-compose run --rm app sh -c "django-admin startproject app ."
+
+docker-compose up
+
+docker-compose run --rm app sh -c "flake8"
+
+docker-compose run --rm app sh -c "python manage.py test"
 ```
 
 ## Few Commands
