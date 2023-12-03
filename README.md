@@ -27,7 +27,23 @@ docker-compose up
 
 docker-compose run --rm app sh -c "flake8"
 
+docker-compose up
+
+docker-compose down
+
 docker-compose run --rm app sh -c "python manage.py test"
+```
+
+## 03-Dec-2023
+
+```bash
+docker-compose run --rm app sh -c "python manage.py startapp core"
+
+docker-compose run --rm app sh -c "python manage.py test"
+
+docker-compose run --rm app sh -c "python manage.py wait_for_db"
+
+docker-compose run --rm app sh -c "python manage.py test && flake8"
 ```
 
 ## Few Commands
