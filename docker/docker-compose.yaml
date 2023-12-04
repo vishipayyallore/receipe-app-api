@@ -1,29 +1,7 @@
 version: "3.9"
 
 services:
-  app:
-    build:
-      context: ./dev-env
-      dockerfile: dev.Dockerfile
-      args:
-        - DEV=true
-    ports:
-      - "8000:8000"
-    volumes:
-      - ./app:/app
-    command: >
-      sh -c "python manage.py wait_for_db &&
-             python manage.py migrate &&
-             python manage.py runserver 0.0.0.0:8000"
-    environment:
-      - DB_HOST=db
-      - DB_NAME=devdb
-      - DB_USER=devuser
-      - DB_PASS=NoPassword
-    depends_on:
-      - postgres-db
-
-  postgres-db:
+  db:
     image: postgres:13-alpine
     ports:
       - 5432:5432
@@ -37,11 +15,14 @@ services:
   dev-env:
     container_name: dev-env
     build:
-      context: ./dev-env
+      context: ..
+      dockerfile: dev.Dockerfile
+      args:
+        - DEV=true
     volumes:
       - "..:/workspace"
     stdin_open: true # docker run -i
     tty: true # docker run -t
-
+    command: /bin/sh -c "while sleep 1000; do :; done"
 volumes:
   dev-db-data: null
