@@ -3,7 +3,8 @@ version: "3.9"
 services:
   app:
     build:
-      context: .
+      context: ./dev-env
+      dockerfile: dev.Dockerfile
       args:
         - DEV=true
     ports:
