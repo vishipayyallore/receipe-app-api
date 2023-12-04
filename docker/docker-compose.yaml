@@ -17,12 +17,16 @@ services:
     build:
       context: ..
       dockerfile: dev.Dockerfile
-      args:
-        - DEV=true
+      args: { "DEV": true, "INSTALL_NODE": "false", "NODE_VERSION": "lts/*" }
     volumes:
       - "..:/workspace"
+    environment:
+      - DB_HOST=db
+      - DB_NAME=devdb
+      - DB_USER=devuser
+      - DB_PASS=NoPassword
     stdin_open: true # docker run -i
     tty: true # docker run -t
-    command: /bin/sh -c "while sleep 1000; do :; done"
+    # command: /bin/sh -c "while sleep 1000; do :; done"
 volumes:
-  dev-db-data: null
+  dev-db-data:

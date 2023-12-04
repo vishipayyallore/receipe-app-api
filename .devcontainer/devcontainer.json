@@ -9,6 +9,7 @@
         "vscode": {
             "extensions": [
                 "humao.rest-client",
+                "ckolkman.vscode-postgres",
                 "ms-python.python",
                 "ms-python.vscode-pylance"
             ]
