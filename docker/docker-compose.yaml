@@ -27,6 +27,5 @@ services:
       - DB_PASS=NoPassword
     stdin_open: true # docker run -i
     tty: true # docker run -t
-    # command: /bin/sh -c "while sleep 1000; do :; done"
 volumes:
   dev-db-data:
