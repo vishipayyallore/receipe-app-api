@@ -12,7 +12,7 @@ services:
     volumes:
       - dev-db-data:/var/lib/postgresql/data
 
-  dev-env:
+  py-dev-env:
     container_name: dev-env
     build:
       context: ..

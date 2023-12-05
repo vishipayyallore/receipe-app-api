@@ -3,12 +3,13 @@
     "dockerComposeFile": [
         "../docker/docker-compose.yaml"
     ],
-    "service": "dev-env",
+    "service": "py-dev-env",
     "workspaceFolder": "/workspace",
     "customizations": {
         "vscode": {
             "extensions": [
                 "humao.rest-client",
+                "ms-azuretools.vscode-docker",
                 "ckolkman.vscode-postgres",
                 "ms-python.python",
                 "ms-python.vscode-pylance"
