@@ -17,7 +17,7 @@ services:
     build:
       context: ..
       dockerfile: dev.Dockerfile
-      args: { "DEV": true, "INSTALL_NODE": "false", "NODE_VERSION": "lts/*" }
+      args: { "DEV": "true", "INSTALL_NODE": "false", "NODE_VERSION": "lts/*" }
     volumes:
       - "..:/workspace"
     environment:
