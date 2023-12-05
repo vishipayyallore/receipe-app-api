@@ -15,8 +15,8 @@ services:
   py-dev-env:
     container_name: py-dev-env
     build:
-      context: ./py-dev-env
-      dockerfile: Dockerfile
+      context: ..
+      dockerfile: ./docker/py-dev-env/Dockerfile
       args: { "DEV": "true", "INSTALL_NODE": "false", "NODE_VERSION": "lts/*" }
     volumes:
       - "..:/workspace"
