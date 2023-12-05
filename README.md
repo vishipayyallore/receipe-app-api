@@ -46,6 +46,11 @@ docker-compose run --rm app sh -c "python manage.py wait_for_db"
 docker-compose run --rm app sh -c "python manage.py test && flake8"
 ```
 
+## 04-Dec-2023
+
+```bash
+```
+
 ## Few Commands
 
 ```bash

@@ -1,0 +1,32 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:13-alpine
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_DB=devdb
+      - POSTGRES_USER=devuser
+      - POSTGRES_PASSWORD=NoPassword
+    volumes:
+      - dev-db-data:/var/lib/postgresql/data
+
+  dev-env:
+    container_name: dev-env
+    build:
+      context: ..
+      dockerfile: dev.Dockerfile
+      args: { "DEV": true, "INSTALL_NODE": "false", "NODE_VERSION": "lts/*" }
+    volumes:
+      - "..:/workspace"
+    environment:
+      - DB_HOST=db
+      - DB_NAME=devdb
+      - DB_USER=devuser
+      - DB_PASS=NoPassword
+    stdin_open: true # docker run -i
+    tty: true # docker run -t
+    # command: /bin/sh -c "while sleep 1000; do :; done"
+volumes:
+  dev-db-data:

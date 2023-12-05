@@ -4,8 +4,7 @@ services:
   app:
     build:
       context: .
-      args:
-        - DEV=true
+      args: { "DEV": true, "INSTALL_NODE": "false", "NODE_VERSION": "lts/*" }
     ports:
       - "8000:8000"
     volumes:
