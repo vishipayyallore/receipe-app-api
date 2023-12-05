@@ -13,7 +13,7 @@ services:
       - dev-db-data:/var/lib/postgresql/data
 
   py-dev-env:
-    container_name: dev-env
+    container_name: py-dev-env
     build:
       context: ..
       dockerfile: dev.Dockerfile
