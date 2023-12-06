@@ -10,6 +10,16 @@ Recipe API Project. I am learning this from a Video Course
 > 1. Create docker-compose.yml
 > 1. Create requirements.dev.txt (For Dev Dependencies. Example: Flake)
 
+## 06-Dec-2023
+
+```bash
+cd app
+python ./manage.py wait_for_db
+python ./manage.py migrate
+python ./manage.py test
+python ./manage.py createsuperuser
+```
+
 ## 01-Dec-2023
 
 ```bash
