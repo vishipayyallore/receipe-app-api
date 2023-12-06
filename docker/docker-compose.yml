@@ -12,12 +12,12 @@ services:
     volumes:
       - dev-db-data:/var/lib/postgresql/data
 
-  dev-env:
-    container_name: dev-env
+  py-dev-env:
+    container_name: py-dev-env
     build:
       context: ..
-      dockerfile: dev.Dockerfile
-      args: { "DEV": true, "INSTALL_NODE": "false", "NODE_VERSION": "lts/*" }
+      dockerfile: ./docker/py-dev-env/Dockerfile
+      args: { "DEV": "true", "INSTALL_NODE": "false", "NODE_VERSION": "lts/*" }
     volumes:
       - "..:/workspace"
     environment:
